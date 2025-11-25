@@ -8,14 +8,14 @@ POST http://localhost:5035/games
 Content-Type: application/json
 
 {
-  "name": "FIFA 2023",
-  "genreId": 3,
-  "price": 59.99,
-  "releaseDate": "2022-09-27"
+  "name": "Minecraft",
+  "genreId": 2,
+  "price": 9.99,
+  "releaseDate": "2011-09-09"
 }
 
 ###
-PUT http://localhost:5035/games/1
+PUT http://localhost:5035/games/2
 Content-Type: application/json
 
 {
