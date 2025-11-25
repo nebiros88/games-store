@@ -486,3 +486,6 @@ API/appsettings.json
 API/dating.db*
 
 **/.vscode/
+
+# exclude .db files
+*.db
