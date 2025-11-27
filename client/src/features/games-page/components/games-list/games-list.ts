@@ -1,15 +1,18 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
+
+import { Game } from '../../../../types';
+import { GamesService } from '../../../../core/services/games-service';
 
 @Component({
   selector: 'app-games-list',
-  imports: [],
   templateUrl: './games-list.html',
   styleUrl: './games-list.css',
 })
 export class GamesList implements OnInit {
-  public games = signal([]);
+  public games = signal<Game[]>([]);
+  private gamesService = inject(GamesService);
 
   ngOnInit(): void {
-    console.log('ON INIT GAMES LIST');
+    this.gamesService.getGames().subscribe((result) => this.games.set(result));
   }
 }

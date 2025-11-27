@@ -1,5 +1,7 @@
 <div class="w-full">
   <ul class="list bg-base-100 rounded-box shadow-md">
-    <li class="list-row"></li>
+    @for (games of games(); track $index) {
+    <li class="list-row">{{ games.name }}</li>
+    }
   </ul>
 </div>
